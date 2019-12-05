@@ -1,5 +1,5 @@
 {% set name = "rocr-runtime" %}
-{% set version = "2.7.0" %}
+{% set version = "2.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/RadeonOpenCompute/ROCR-Runtime/archive/roc-{{ version }}.tar.gz
-  sha256: 726b6556d4072caa35e751e067f4e5dd283583ed0aff49d72af14e0449bfe318
+  sha256: eb5e423db55b61068146a8543d68922494c0c2db1bbd5745379ea41ba24d0d02
   patches:
     - no_override_shared_linker_flags.diff
 
