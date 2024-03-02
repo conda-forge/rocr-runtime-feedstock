@@ -12,7 +12,7 @@ source:
     - no_override_shared_linker_flags.diff
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not linux]
 
 requirements:
