@@ -22,6 +22,8 @@ requirements:
   host:
     - elfutils
     - roct-thunk-interface {{ version }}
+    - clangdev
+    - llvmdev
 
 test:
   commands:
