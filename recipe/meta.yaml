@@ -1,13 +1,13 @@
 {% set name = "rocr-runtime" %}
-{% set version = "2.7.0" %}
+{% set version = "6.0.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/RadeonOpenCompute/ROCR-Runtime/archive/roc-{{ version }}.tar.gz
-  sha256: 726b6556d4072caa35e751e067f4e5dd283583ed0aff49d72af14e0449bfe318
+  url: https://github.com/ROCm/ROCR-Runtime/archive/refs/tags/rocm-{{ version }}.tar.gz
+  sha256: e7ff4d7ac35a2dd8aad1cb40b96511a77a9c23fe4d1607902328e53728e05c28
   patches:
     - no_override_shared_linker_flags.diff
 
@@ -24,9 +24,6 @@ requirements:
   host:
     - elfutils
     - roct-thunk-interface {{ version }}
-  run:
-    - {{ pin_compatible("elfutils") }}
-    - roct-thunk-interface {{ version }}
 
 test:
   commands:
@@ -34,7 +31,7 @@ test:
     - test -f $PREFIX/lib/libhsa-runtime64.so
 
 about:
-  home: https://github.com/RadeonOpenCompute/ROCR-Runtime
+  home: https://github.com/ROCm/ROCR-Runtime
   license: NCSA
   license_family: MIT
   license_file: LICENSE.txt
