@@ -22,6 +22,7 @@ requirements:
   host:
     - elfutils
     - roct-thunk-interface {{ version }}
+    - rocm-device-libs {{ version }}
     - clangdev
     - llvmdev
     - lld
