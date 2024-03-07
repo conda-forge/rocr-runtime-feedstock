@@ -23,9 +23,9 @@ requirements:
     - elfutils
     - roct-thunk-interface {{ version }}
     - rocm-device-libs {{ version }}
-    - clangdev
-    - llvmdev
-    - lld
+    - clangdev 17.*
+    - llvmdev  17.*
+    - lld      17.*
 
 test:
   commands:
