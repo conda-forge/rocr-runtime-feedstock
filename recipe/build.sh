@@ -5,6 +5,8 @@ cd src
 mkdir build
 cd build
 
+export HIP_DEVICE_LIB_PATH=$PREFIX/lib/amdgcn/bitcode
+
 cmake ${CMAKE_ARGS} \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DCMAKE_BUILD_TYPE=Release \
