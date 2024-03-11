@@ -19,6 +19,8 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make
+    # For xxd
+    - vim
   host:
     - elfutils
     - roct-thunk-interface {{ version }}
