@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/ROCm/ROCR-Runtime/archive/refs/tags/rocm-{{ version }}.tar.gz
   sha256: e7ff4d7ac35a2dd8aad1cb40b96511a77a9c23fe4d1607902328e53728e05c28
+  patches:
+    - fix_xxd_issue.diff
 
 build:
   number: 0
