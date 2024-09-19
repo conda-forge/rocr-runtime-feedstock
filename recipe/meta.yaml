@@ -1,5 +1,5 @@
 {% set name = "rocr-runtime" %}
-{% set version = "6.1.0" %}
+{% set version = "6.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ROCm/ROCR-Runtime/archive/refs/tags/rocm-{{ version }}.tar.gz
-  sha256: 50386ebcb7ff24449afa2a10c76a059597464f877225c582ba3e097632a43f9c
+  sha256: dbe477b323df636f5e3221471780da156c938ec00dda4b50639aa8d7fb9248f4
   patches:
     - fix_xxd_issue.diff
 
@@ -18,8 +18,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - sysroot_linux-64 2.17   # [linux64]
     - cmake
     - make
     # For xxd
