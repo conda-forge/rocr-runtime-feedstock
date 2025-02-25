@@ -12,16 +12,17 @@ source:
     - fix_xxd_issue.diff
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - sysroot_linux-64 2.17   # [linux64]
     - cmake
     - make
+    - pkg-config
     # For xxd
     - vim
   host:
@@ -31,6 +32,7 @@ requirements:
     - clangdev 17.*
     - llvmdev  17.*
     - lld      17.*
+    - zlib
 
 test:
   commands:
