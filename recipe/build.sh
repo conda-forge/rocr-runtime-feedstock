@@ -1,7 +1,7 @@
 #!/bin/bash
 
+set -xeo pipefail
 
-cd src
 mkdir build
 cd build
 
