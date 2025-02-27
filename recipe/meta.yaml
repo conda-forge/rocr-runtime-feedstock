@@ -27,7 +27,6 @@ requirements:
     - vim
   host:
     - elfutils
-    - roct-thunk-interface {{ version }}
     - rocm-device-libs {{ version }}
     - clangdev 17.*
     - llvmdev  17.*
