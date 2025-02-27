@@ -26,9 +26,11 @@ requirements:
   host:
     - elfutils
     - rocm-device-libs {{ version }}
-    - clangdev 17.*
-    - llvmdev  17.*
-    - lld      17.*
+    - clangdev 19.*
+    - llvmdev  19.*
+    - lld      19.*
+    - numactl
+    - libdrm
     - zlib
 
 test:
