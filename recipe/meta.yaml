@@ -8,6 +8,9 @@ package:
 source:
   url: https://github.com/ROCm/ROCR-Runtime/archive/refs/tags/rocm-{{ version }}.tar.gz
   sha256: 3b23bed04cbed72304d31d69901eb76afa2099c7ac37f055348dfcda2d25e41a
+  patches:
+    # Workaround for https://github.com/conda-forge/rocr-runtime-feedstock/pull/23#issuecomment-3285286272
+    - drop_gfx950.patch
 
 build:
   number: 0
