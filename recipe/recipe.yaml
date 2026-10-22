@@ -36,6 +36,8 @@ requirements:
     - libdrm
     - zlib
     - rocm-core ${{ version }}.*
+  run_exports:
+    - ${{ pin_subpackage('rocr-runtime', upper_bound='x.x') }}
 
 tests:
   - package_contents:
